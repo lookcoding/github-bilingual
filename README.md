@@ -30,19 +30,26 @@
 
 ---
 
-## 🚀 极速安装使用指南（开发者模式 30 秒安装）
+## 🚀 极速安装使用指南（30 秒免翻墙安装）
 
-1. 克隆或下载本项目压缩包并解压到本地：
-   ```bash
-   git clone https://github.com/你的GitHub用户名/github-bilingual.git
-   ```
-2. 打开 Chrome 或 Edge 浏览器，在地址栏输入并回车：
+### 步骤一：获取扩展文件（二选一）
+
+- **方式 A：直接下载离线安装包（最推荐普通用户）**  
+  前往 👉 [Releases 页面](https://github.com/lookcoding/github-bilingual/releases) 下载最新的 `github-bilingual-v1.0.0.zip`，并解压到任意文件夹。
+- **方式 B：Git 源码克隆（开发者）**  
+  ```bash
+  git clone https://github.com/lookcoding/github-bilingual.git
+  ```
+
+### 步骤二：加载到浏览器
+
+1. 打开 Chrome 或 Edge 浏览器，在地址栏输入并回车：
    - Chrome: `chrome://extensions/`
    - Edge: `edge://extensions/`
-3. 在页面右上角（或左侧导航栏）打开 **“开发者模式” (Developer mode)** 开关。
-4. 点击左上角的 **“加载已解压的扩展程序” (Load unpacked)**。
-5. 在弹出的文件选择器中，选择本项目的解压根目录（包含 `manifest.json` 的文件夹）。
-6. 打开 [GitHub](https://github.com/) 任意页面，即可体验流畅汉化与中英双语对照！
+2. 在页面右上角（或左侧导航栏）打开 **“开发者模式” (Developer mode)** 开关。
+3. 点击左上角的 **“加载已解压的扩展程序” (Load unpacked)**。
+4. 在弹出的文件选择器中，选择刚刚解压的根目录（包含 `manifest.json` 的文件夹）。
+5. 打开 [GitHub](https://github.com/) 任意页面，即可体验流畅汉化与中英双语对照！
 
 ---
 
