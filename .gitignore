@@ -1,0 +1,22 @@
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE & Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node & Temp files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.gemini/
+scratch/
+
+# Archives & build packages
+*.zip
+*.crx

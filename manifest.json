@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub 汉化与双语对照 (GitHub Bilingual)",
+  "version": "1.0.0",
+  "description": "精细化 GitHub 汉化扩展，保留英文原词与中英双语对照，支持悬浮查看原词与 Alt 键秒切中英。",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*",
+        "https://gist.github.com/*",
+        "https://skills.github.com/*",
+        "https://education.github.com/*",
+        "https://www.githubstatus.com/*"
+      ],
+      "js": [
+        "locals.js",
+        "content/dict_addon.js",
+        "content/content.js"
+      ],
+      "css": [
+        "content/content.css"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

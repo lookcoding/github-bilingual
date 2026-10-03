@@ -1,0 +1,84 @@
+/* GitHub 汉化与双语预览样式 */
+
+/* 严格保护 GitHub 原生下拉菜单、ActionList 与弹层布局，绝不改变原版 UI 结构与排版 */
+.ActionList-item,
+.ActionList-item-label,
+.ActionList-item-description,
+.ActionListItem,
+.ActionListItem-label,
+[data-component="ActionList.Item--text"],
+[data-component="text"],
+[role="menuitem"],
+[role="menuitem"] span,
+.SelectMenu-item,
+.SelectMenu-item-text,
+.dropdown-item,
+.dropdown-menu li,
+#__primerPortalRoot__ [role="menuitem"],
+#__primerPortalRoot__ .ActionList-item,
+#__primerPortalRoot__ .ActionList-item-label,
+.AppHeader-drawer .ActionList-item-label {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+}
+
+/* 保证 Primer ActionList 菜单项拥有自然的自适应宽度，防止在弹性盒布局中被压缩成单列 */
+#__primerPortalRoot__ [role="menu"],
+#__primerPortalRoot__ ul.ActionListWrap,
+.ActionListWrap {
+  min-width: max-content !important;
+}
+
+/* 词条点缀虚线（设置中开启时生效） */
+[data-ghcn-en].ghcn-underline {
+  text-decoration: underline dotted rgba(9, 105, 218, 0.45) !important;
+  text-underline-offset: 3px !important;
+  cursor: help !important;
+}
+
+/* 快捷键 Alt 临时切换英文时的提示气泡 */
+.ghcn-alt-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: rgba(31, 35, 40, 0.92);
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  line-height: 1.4;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+  box-shadow: 0 8px 24px rgba(140, 149, 159, 0.2), 0 2px 8px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 2147483647;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(12px) scale(0.96);
+  transition: opacity 0.16s ease, transform 0.16s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.ghcn-alt-toast.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.ghcn-alt-toast-badge {
+  background: #0969da;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* 当 Alt 处于激活状态时，禁用可能干预的自定义文字样式 */
+html.ghcn-alt-active [data-ghcn-en].ghcn-underline {
+  text-decoration: none !important;
+  cursor: inherit !important;
+}
